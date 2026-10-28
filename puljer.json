@@ -31,6 +31,15 @@
     "url": "https://www.dif.dk/raadgivning-og-stoette/stoettemuligheder/dif-og-dgis-foreningspulje"
   },
   {
+    "navn": "AURA Lokalværdipulje",
+    "fristListe": [
+      "2026-05-28",
+      "2026-10-29"
+    ],
+    "beloebTekst": "Støtte efter ansøgningsbehov; beløb afhænger af projektets omfang og tilgængelige midler.",
+    "url": "https://www.aura.dk/om-aura/vi-stoetter-lokalt/soeg-stoette/"
+  },
+  {
     "navn": "Aarhus Motions udlodningspulje",
     "frist": "2026-11-15",
     "url": "https://www.aarhusmotion.dk/udlodningspulje"
