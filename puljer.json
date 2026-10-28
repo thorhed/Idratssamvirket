@@ -1,0 +1,131 @@
+[
+  {
+    "navn": "DIF og DGI’s Foreningspulje, stor pulje",
+    "aarligeFrister": [
+      "03-31",
+      "07-31",
+      "10-31"
+    ],
+    "maxBeloeb": 300000,
+    "url": "https://www.dif.dk/raadgivning-og-stoette/stoettemuligheder/dif-og-dgis-foreningspulje"
+  },
+  {
+    "navn": "DIF og DGI’s Foreningspulje, lille pulje",
+    "frist": "foerst-til-moelle",
+    "aabner": "2026-09-01",
+    "maxBeloeb": 25000,
+    "url": "https://www.dif.dk/raadgivning-og-stoette/stoettemuligheder/dif-og-dgis-foreningspulje"
+  },
+  {
+    "navn": "DIF og DGI’s Foreningspulje, lille pulje",
+    "frist": "foerst-til-moelle",
+    "aabner": "2027-02-01",
+    "maxBeloeb": 25000,
+    "url": "https://www.dif.dk/raadgivning-og-stoette/stoettemuligheder/dif-og-dgis-foreningspulje"
+  },
+  {
+    "navn": "DIF og DGI’s Foreningspulje, lille pulje",
+    "frist": "foerst-til-moelle",
+    "aabner": "2027-09-01",
+    "maxBeloeb": 25000,
+    "url": "https://www.dif.dk/raadgivning-og-stoette/stoettemuligheder/dif-og-dgis-foreningspulje"
+  },
+  {
+    "navn": "Aarhus Motions udlodningspulje",
+    "frist": "2026-11-15",
+    "url": "https://www.aarhusmotion.dk/udlodningspulje"
+  },
+  {
+    "navn": "Frivillig- og Erhvervsalliancen, Aarhus Kommune",
+    "frist": "2026-11-23",
+    "maxBeloeb": 50000,
+    "url": "https://aarhus.dk/forening/tilskud-stoette-og-puljer/foreninger/frivillig-og-erhvervsalliancen"
+  },
+  {
+    "navn": "Den Lokale Udviklingspulje, Aarhus Kommune",
+    "groen": true,
+    "frist": "2026-11-10",
+    "maxBeloeb": 50000,
+    "url": "https://aarhus.dk/forening/tilskud-stoette-og-puljer/foreninger/den-lokale-udviklingspulje"
+  },
+  {
+    "navn": "Nordea-fonden",
+    "groen": true,
+    "frist": "loebende",
+    "url": "https://nordeafonden.dk/"
+  },
+  {
+    "navn": "Tilskud til leder- og instruktøruddannelse, Idrætssamvirket Aarhus",
+    "egen": true,
+    "aarligeFrister": [
+      "03-01",
+      "06-01",
+      "09-01",
+      "12-01"
+    ],
+    "maxBeloeb": 15000,
+    "beloebTekst": "Søg op til 15%, dog max 15.000 kr.",
+    "url": "https://www.idraetssamvirket.dk/tilskud-puljer/idraetssamvirkets-puljer/"
+  },
+  {
+    "navn": "Tilskud til nye initiativer og udvikling, Idrætssamvirket Aarhus",
+    "egen": true,
+    "aarligeFrister": [
+      "06-01",
+      "12-01"
+    ],
+    "maxBeloeb": 15000,
+    "url": "https://www.idraetssamvirket.dk/tilskud-puljer/idraetssamvirkets-puljer/"
+  },
+  {
+    "navn": "Købmand Herman Sallings Fond, Salling Fondene",
+    "frist": "2027-03-15",
+    "url": "https://www.sallingfondene.dk/ansoegning"
+  },
+  {
+    "navn": "Købmand Ferdinand Sallings Mindefond, Salling Fondene",
+    "frist": "2027-03-15",
+    "url": "https://www.sallingfondene.dk/ansoegning"
+  },
+  {
+    "navn": "Udlodningsmidler til Friluftsliv, lokale projekter, Friluftsrådet",
+    "fristListe": [
+      "2027-02-15",
+      "2027-09-15"
+    ],
+    "beloebTekst": "Søg fra 20.000 kr. · Maxbeløb ikke fastlagt",
+    "url": "https://friluftsraadet.dk/sammen-forbedrer-vi-mulighederne-for-befolkningens-friluftsliv-naturforstaaelse/tilskud-til-projekter/soeg-tilskud-til-lokale-projekter"
+  },
+  {
+    "navn": "Udlodningsmidler til Friluftsliv, nationale projekter, Friluftsrådet",
+    "fristListe": [
+      "2027-02-15",
+      "2027-06-15",
+      "2027-09-15"
+    ],
+    "beloebTekst": "Søg fra 200.000 kr. · Maxbeløb ikke fastlagt",
+    "url": "https://friluftsraadet.dk/sammen-forbedrer-vi-mulighederne-for-befolkningens-friluftsliv-naturforstaaelse/tilskud-til-projekter/soeg-tilskud-til-nationale-projekter"
+  },
+  {
+    "navn": "Fokuspulje: Danmarks Naturstier, Friluftsrådet",
+    "fristListe": [
+      "2027-02-15",
+      "2027-06-15",
+      "2027-09-15"
+    ],
+    "beloebTekst": "Søg fra 20.000 kr. · Maxbeløb ikke fastlagt",
+    "url": "https://friluftsraadet.dk/sammen-forbedrer-vi-mulighederne-for-befolkningens-friluftsliv-naturforstaaelse/tilskud-til-projekter/soeg-fokuspulje-danmarks-naturstier"
+  },
+  {
+    "navn": "Anlægspuljen til idræts-, fritids- og outdoorfaciliteter, Aarhus Kommune",
+    "frist": "2027-09-01",
+    "beloebTekst": "Få op til 50% i tilskud",
+    "url": "https://aarhus.dk/forening/tilskud-stoette-og-puljer/foreninger/anlaegspuljen-til-idraets-fritids-og-outdoorfaciliteter"
+  },
+  {
+    "navn": "Anlægspuljen, akut anlægstilskud, Aarhus Kommune",
+    "frist": "loebende",
+    "beloebTekst": "Få op til 50% i tilskud",
+    "url": "https://aarhus.dk/forening/tilskud-stoette-og-puljer/foreninger/anlaegspuljen-til-idraets-fritids-og-outdoorfaciliteter"
+  }
+]
