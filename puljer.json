@@ -32,6 +32,7 @@
   },
   {
     "navn": "AURA Lokalværdipulje",
+    "groen": true,
     "fristListe": [
       "2026-05-28",
       "2026-10-29"
