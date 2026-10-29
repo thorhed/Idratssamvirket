@@ -93,6 +93,7 @@
   .chip[aria-pressed="true"] { background: var(--primaer); border-color: var(--primaer); color: var(--hvid); }
   .chip:focus-visible { outline: 3px solid var(--blaa); outline-offset: 2px; }
   .egen-logo { position: absolute; right: 12px; bottom: 10px; height: 20px; width: auto; }
+  @media (max-width: 520px) { .egen-logo { position: static; display: block; margin: 0 0 8px; } }
   .tom { color: var(--graa-moerk); padding: 12px 0; }
   @media (max-width: 420px) { li { grid-template-columns: 60px 1fr; gap: 10px; } header.top img { height: 28px; } }
 </style>
@@ -106,8 +107,8 @@
 <main>
   <h1>Idrætssamvirket Aarhus’ fondskalender</h1>
   <p class="intro">Fondskalenderen viser deadlines for puljer og fonde, som er relevante for idrætsforeninger i Aarhus Kommune, de kommende 12 måneder. Overblikket er ikke en udtømt liste over relevante fonde til jeres projekt.</p>
-  <p class="intro">Der er brugt AI til at lave overblikket, og derfor er du selv ansvarlig for at kontrollere, at de beskrevne deadlines er korrekte.</p>
-  <p class="intro">Manglende puljer, forslag til forbedringer eller fejl kan sendes til Thor Søjberg fra Idrætssamvirket på <a href="mailto:ths@isaarhus.dk">ths@isaarhus.dk</a></p>
+  <p class="intro">Idrætssamvirket har brugt AI til at lave overblikket. Du er selv ansvarlig for at kontrollere datoerne.</p>
+  <p class="intro">Forslag til forbedringer kan sendes til Thor Søjberg fra Idrætssamvirket på <a href="mailto:ths@isaarhus.dk">ths@isaarhus.dk</a></p>
   <p class="fejl" id="fejl" hidden></p>
   <div class="soeg">
     <input type="search" id="soeg" placeholder="Søg i puljer og fonde" aria-label="Søg i puljer og fonde" autocomplete="off">
@@ -117,11 +118,6 @@
       <span class="track" aria-hidden="true"><span class="thumb"></span></span>
       <span>Særlig relevant for grøn omstilling</span>
     </button>
-  </div>
-  <div class="sort" role="radiogroup" aria-labelledby="sortLabel">
-    <span id="sortLabel" class="sort-label">Sortér efter</span>
-    <label><input type="radio" name="sortering" value="dato" checked><span>Dato (kommende først)</span></label>
-    <label><input type="radio" name="sortering" value="beloeb"><span>Beløb (største først)</span></label>
   </div>
   <div class="chips" role="group" aria-labelledby="belLabel">
     <span id="belLabel" class="sort-label">Vis kun:</span>
@@ -208,7 +204,7 @@ let filterAktiv = false;
 let sortering = "dato";
 let udfoldet = false;
 let kommendeAntal = 0;
-const ANTAL = 3;
+const ANTAL = 2;
 let soeg = "";
 const valgteBeloeb = new Set();
 const BEL = { "0-25000": [0, 25000], "25001-50000": [25001, 50000], "50001-100000": [50001, 100000], "100000+": [100001, Infinity] };
@@ -320,7 +316,7 @@ function kort(p) {
   if (p.egen === true) {
     const lg = el("img", "egen-logo");
     lg.src = EGEN_LOGO; lg.alt = ""; lg.setAttribute("aria-hidden", "true");
-    li.append(lg);
+    body.prepend(lg);
   }
   return li;
 }
@@ -449,8 +445,6 @@ async function start() {
     knap.setAttribute("aria-checked", String(filterAktiv));
     vis(alleData);
   });
-  document.querySelectorAll('input[name="sortering"]').forEach(r =>
-    r.addEventListener("change", () => { sortering = r.value; vis(alleData); }));
   document.getElementById("seFlere").addEventListener("click", () => {
     udfoldet = !udfoldet;
     foldKommende();
