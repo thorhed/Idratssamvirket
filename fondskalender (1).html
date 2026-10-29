@@ -203,7 +203,7 @@ let filterAktiv = false;
 let sortering = "dato";
 let udfoldet = false;
 let kommendeAntal = 0;
-const ANTAL = 2;
+const MOBIL = "(max-width: 520px)";   // samme breakpoint som logo-layoutet
 let soeg = "";
 const valgteBeloeb = new Set();
 const BEL = { "0-25000": [0, 25000], "25001-50000": [25001, 50000], "50001-100000": [50001, 100000], "100000+": [100001, Infinity] };
@@ -375,6 +375,7 @@ function foldKommende() {
   const ul = document.getElementById("kommende");
   const knap = document.getElementById("seFlere");
   const kort = Array.from(ul.children);
+  const ANTAL = window.matchMedia(MOBIL).matches ? 1 : 3;   // synlige kort: mobil 1, desktop 3
   const skjul = kommendeAntal > ANTAL && !udfoldet;
   kort.forEach((li, i) => { li.inert = skjul && i >= ANTAL; });
   wrap.classList.toggle("collapsed", skjul);
