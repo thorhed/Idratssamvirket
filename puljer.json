@@ -59,6 +59,13 @@
     "url": "https://aarhus.dk/forening/tilskud-stoette-og-puljer/foreninger/den-lokale-udviklingspulje"
   },
   {
+    "navn": "NRGi Puljen",
+    "groen": true,
+    "frist": "2026-11-02",
+    "beloebTekst": "Støttebeløb varierer efter projekt; typisk flere millioner kroner",
+    "url": "https://andelshaver.nrgi.dk/puljer-og-stoette/nrgi-puljen/"
+  },
+  {
     "navn": "Nordea-fonden",
     "groen": true,
     "frist": "loebende",
