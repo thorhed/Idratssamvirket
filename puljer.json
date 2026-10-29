@@ -31,6 +31,16 @@
     "url": "https://www.dif.dk/raadgivning-og-stoette/stoettemuligheder/dif-og-dgis-foreningspulje"
   },
   {
+    "navn": "AURA Lokalværdipulje",
+    "groen": true,
+    "fristListe": [
+      "2026-05-28",
+      "2026-10-29"
+    ],
+    "beloebTekst": "Maxbeløb ikke fastlagt",
+    "url": "https://www.aura.dk/om-aura/vi-stoetter-lokalt/soeg-stoette/"
+  },
+  {
     "navn": "Aarhus Motions udlodningspulje",
     "frist": "2026-11-15",
     "url": "https://www.aarhusmotion.dk/udlodningspulje"
@@ -64,7 +74,7 @@
       "12-01"
     ],
     "maxBeloeb": 15000,
-    "beloebTekst": "Søg op til 15 %, dog max 15.000 kr.",
+    "beloebTekst": "Søg op til 25%, dog max 15.000 kr.",
     "url": "https://www.idraetssamvirket.dk/tilskud-puljer/idraetssamvirkets-puljer/"
   },
   {
@@ -93,7 +103,7 @@
       "2027-02-15",
       "2027-09-15"
     ],
-    "beloebTekst": "Søg fra 20.000 kr. · Maxbeløb ikke oplyst",
+    "beloebTekst": "Søg fra 20.000 kr. · Maxbeløb ikke fastlagt",
     "url": "https://friluftsraadet.dk/sammen-forbedrer-vi-mulighederne-for-befolkningens-friluftsliv-naturforstaaelse/tilskud-til-projekter/soeg-tilskud-til-lokale-projekter"
   },
   {
@@ -103,7 +113,7 @@
       "2027-06-15",
       "2027-09-15"
     ],
-    "beloebTekst": "Søg fra 200.000 kr. · Maxbeløb ikke oplyst",
+    "beloebTekst": "Søg fra 200.000 kr. · Maxbeløb ikke fastlagt",
     "url": "https://friluftsraadet.dk/sammen-forbedrer-vi-mulighederne-for-befolkningens-friluftsliv-naturforstaaelse/tilskud-til-projekter/soeg-tilskud-til-nationale-projekter"
   },
   {
@@ -113,19 +123,19 @@
       "2027-06-15",
       "2027-09-15"
     ],
-    "beloebTekst": "Søg fra 20.000 kr. · Maxbeløb ikke oplyst",
+    "beloebTekst": "Søg fra 20.000 kr. · Maxbeløb ikke fastlagt",
     "url": "https://friluftsraadet.dk/sammen-forbedrer-vi-mulighederne-for-befolkningens-friluftsliv-naturforstaaelse/tilskud-til-projekter/soeg-fokuspulje-danmarks-naturstier"
   },
   {
     "navn": "Anlægspuljen til idræts-, fritids- og outdoorfaciliteter, Aarhus Kommune",
     "frist": "2027-09-01",
-    "beloebTekst": "Søg op til 50 % · Maxbeløb ikke oplyst",
+    "beloebTekst": "Få op til 50% i tilskud",
     "url": "https://aarhus.dk/forening/tilskud-stoette-og-puljer/foreninger/anlaegspuljen-til-idraets-fritids-og-outdoorfaciliteter"
   },
   {
     "navn": "Anlægspuljen, akut anlægstilskud, Aarhus Kommune",
     "frist": "loebende",
-    "beloebTekst": "Søg op til 50 % · Maxbeløb ikke oplyst",
+    "beloebTekst": "Få op til 50% i tilskud",
     "url": "https://aarhus.dk/forening/tilskud-stoette-og-puljer/foreninger/anlaegspuljen-til-idraets-fritids-og-outdoorfaciliteter"
   }
 ]
