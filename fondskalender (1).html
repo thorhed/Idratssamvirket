@@ -28,15 +28,12 @@
   main { max-width: 760px; margin: 0 auto; padding: 18px 16px 24px; }
   h1, h2 { font-family: "Quicksand", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; font-weight: 700; }
   h1 { font-size: 1.4rem; margin: 0 0 4px; color: var(--primaer); }
-  .sub { color: var(--graa-moerk); margin: 0 0 16px; font-size: .95rem; }
   h2 { font-size: 1.05rem; margin: 26px 0 10px; color: var(--primaer);
     padding-bottom: 6px; border-bottom: 2px solid var(--primaer); }
-  h2.stille { color: var(--graa-moerk); border-bottom-color: var(--graa-lys); }
   ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
   li { position: relative; display: grid; grid-template-columns: 76px 1fr; gap: 14px; align-items: center;
     background: var(--lys); border: 1px solid #e3dfc8; border-left: 5px solid var(--primaer);
     border-radius: 8px; padding: 12px 14px; }
-  li.past { opacity: .65; border-left-color: var(--graa-lys); }
   li.loebende { border-left-color: var(--groen); }
   .dato { text-align: center; line-height: 1.1; color: var(--primaer); }
   .dato .dag { display: block; font-size: 1.7rem; font-weight: 700; }
@@ -50,7 +47,6 @@
   .soon { background: #fbe3e5; color: #8f0e1a; }
   .near { background: #e4e9ee; color: #34444f; }
   .ok { background: #def0ea; color: #1b5c49; }
-  .past-b { background: #eceff2; color: var(--graa-moerk); }
   .loeb-b { background: #def0ea; color: #1b5c49; }
   a { color: var(--primaer); font-weight: 600; }
   a.laes { display: inline-flex; align-items: center; gap: 5px; }
@@ -64,14 +60,7 @@
   .switch[aria-checked="true"] .track { background: var(--groen); }
   .switch[aria-checked="true"] .thumb { transform: translateX(18px); }
   .switch:focus-visible { outline: 3px solid var(--blaa); outline-offset: 2px; border-radius: 6px; }
-  .sort { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 14px; }
   .sort-label { font-size: .9rem; font-weight: 600; color: var(--graa-moerk); margin-right: 2px; }
-  .sort label { position: relative; }
-  .sort input { position: absolute; opacity: 0; width: 1px; height: 1px; }
-  .sort label span { display: inline-block; padding: 5px 12px; border: 1px solid var(--graa-lys); border-radius: 999px; font-size: .9rem; font-weight: 600; cursor: pointer; background: var(--hvid); color: var(--graa-moerk); }
-  .sort input:checked + span { background: var(--primaer); border-color: var(--primaer); color: var(--hvid); }
-  .sort input:focus-visible + span { outline: 3px solid var(--blaa); outline-offset: 2px; }
-  .frister { font-weight: 400; font-size: .85rem; }
   .fold { position: relative; }
   .fold.collapsed { overflow: hidden; }
   .fold.collapsed::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 90px; background: linear-gradient(to bottom, rgba(255,255,255,0), #ffffff); pointer-events: none; }
@@ -200,7 +189,6 @@ const MAANEDER = ["jan","feb","mar","apr","maj","jun","jul","aug","sep","okt","n
 const MAANEDER_LANG = ["januar","februar","marts","april","maj","juni","juli","august","september","oktober","november","december"];
 
 let filterAktiv = false;
-let sortering = "dato";
 let udfoldet = false;
 let kommendeAntal = 0;
 const MOBIL = "(max-width: 520px)";   // samme breakpoint som logo-layoutet
@@ -212,7 +200,6 @@ let alleData = [];
 const erLoebende = p => !p.frist || p.frist === "loebende";
 const erMoelle = p => p.frist === "foerst-til-moelle";
 const nokkel = p => erMoelle(p) ? p.aabner : p.frist;
-const datoVaerdi = p => /^\d{4}-\d{2}-\d{2}$/.test(nokkel(p) || "") ? parseDato(nokkel(p)).getTime() : 0;
 const datoSort = l => l.slice().sort((a, b) => parseDato(nokkel(a)) - parseDato(nokkel(b)));
 function parseDato(s) { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); }
 function dageTil(dato) {
@@ -221,7 +208,6 @@ function dageTil(dato) {
   return Math.round((dato - i_dag) / 86400000);
 }
 function status(dage) {
-  if (dage < 0) return { cls: "past-b", tekst: "Udløbet" };
   if (dage === 0) return { cls: "soon", tekst: "I dag" };
   if (dage === 1) return { cls: "soon", tekst: "I morgen" };
   if (dage <= 7) return { cls: "soon", tekst: "Om " + dage + " dage" };
@@ -256,7 +242,7 @@ function kort(p) {
   const moelle = erMoelle(p);
   const d = (loeb || moelle) ? null : parseDato(p.frist);
   const dage = (loeb || moelle) ? 0 : dageTil(d);
-  const li = el("li", loeb ? "loebende" : (dage < 0 ? "past" : ""));
+  const li = el("li", loeb ? "loebende" : "");
 
   let venstre;
   if (moelle) {
@@ -326,24 +312,6 @@ function fyld(id, liste) {
   liste.forEach(p => ul.append(kort(p)));
 }
 
-function medNaesteFrist(p) {
-  if (Array.isArray(p.fristListe) && p.fristListe.length) {
-    const sorteret = p.fristListe.slice().sort();
-    const naeste = sorteret.find(s => dageTil(parseDato(s)) >= 0) || sorteret[sorteret.length - 1];
-    return Object.assign({}, p, { frist: naeste });
-  }
-  if (!Array.isArray(p.aarligeFrister) || !p.aarligeFrister.length) return p;
-  const aar = new Date().getFullYear();
-  const kandidater = [];
-  for (const y of [aar, aar + 1]) p.aarligeFrister.forEach(md => kandidater.push(y + "-" + md));
-  const naeste = kandidater.sort().find(s => dageTil(parseDato(s)) >= 0);
-  const tekst = p.aarligeFrister.map(md => {
-    const [m, d] = md.split("-").map(Number);
-    return d + ". " + MAANEDER_LANG[m - 1];
-  }).join(" · ");
-  return Object.assign({}, p, { frist: naeste, fristerTekst: "Frister hvert år: " + tekst });
-}
-
 const vinduesSlut = () => { const n = new Date(); return new Date(n.getFullYear() + 1, n.getMonth(), n.getDate()); };
 const iVinduet = s => { const d = parseDato(s); return dageTil(d) >= 0 && d <= vinduesSlut(); };
 
@@ -360,13 +328,6 @@ function udfold(p) {
   if (erMoelle(p)) return parseDato(p.aabner) <= vinduesSlut() ? [p] : [];
   if (erLoebende(p)) return [p];
   return iVinduet(p.frist) ? [p] : [];
-}
-
-function sorter(liste) {
-  if (sortering !== "beloeb") return liste;
-  return liste.slice().sort((a, b) =>
-    (b.maxBeloeb || 0) - (a.maxBeloeb || 0) ||
-    (datoVaerdi(a) - datoVaerdi(b)));
 }
 
 /* Vis kun de første ANTAL kort; resten fades ud indtil "Se flere" */
@@ -400,10 +361,8 @@ function matcher(p) {
 function vis(alle) {
   const grund = alle.filter(matcher);
   const data = grund.flatMap(udfold);
-  const faste = data.filter(p => !erLoebende(p) && !erMoelle(p))
-    .sort((a, b) => parseDato(a.frist) - parseDato(b.frist));
-  const kommende = sorter(datoSort(data.filter(erMoelle).concat(faste.filter(p => dageTil(parseDato(p.frist)) >= 0))));
-  const loebende = sorter(data.filter(erLoebende));
+  const kommende = datoSort(data.filter(p => !erLoebende(p)));
+  const loebende = data.filter(erLoebende);
 
   fyld("kommende", kommende);
   kommendeAntal = kommende.length;
