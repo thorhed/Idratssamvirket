@@ -83,6 +83,7 @@
   .chip:focus-visible { outline: 3px solid var(--blaa); outline-offset: 2px; }
   .egen-logo { position: absolute; right: 12px; bottom: 10px; height: 20px; width: auto; }
   @media (max-width: 520px) { .egen-logo { position: static; display: block; margin: 0 0 8px; } }
+  .obs { margin: 0 0 6px; font-size: .9rem; font-weight: 600; color: var(--primaer); }
   .tom { color: var(--graa-moerk); padding: 12px 0; }
   @media (max-width: 420px) { li { grid-template-columns: 60px 1fr; gap: 10px; } header.top img { height: 28px; } }
 </style>
@@ -137,6 +138,7 @@
    - groen: true hvis puljen er særlig relevant for grøn omstilling (vises med ♻️ og bruges af filteret)
    - fristListe: kendte kommende frister som ["ÅÅÅÅ-MM-DD", ...] – der laves et kort pr. dato
    - aarligeFrister: tilbagevendende frister hvert år som ["MM-DD", ...] i stedet for frist – der laves et kort pr. dato de næste 12 måneder
+   - "obs info": kort bemærkning der vises på kortet (fx "Bemærk: Intern deadline …") – udelades hvis ingen
    - beloebTekst: fri tekst i stedet for "Søg op til xx kr." (fx "Søg op til 15 %, dog max 15.000 kr.")
    - maxBeloeb: højeste beløb man kan søge (tal, fx 50000) – udelades hvis ukendt
    - url: direkte link til siden, hvor man kan læse mere og ansøge (vises som "Læs mere" med ikon; uden url vises intet link)
@@ -283,6 +285,7 @@ function kort(p) {
   else if (typeof p.maxBeloeb === "number" && p.maxBeloeb > 0)
     body.append(el("p", "beloeb", "Søg op til " + p.maxBeloeb.toLocaleString("da-DK") + " kr."));
   else body.append(el("p", "beloeb", "Maxbeløb ikke oplyst"));
+  if (p["obs info"]) body.append(el("p", "obs", p["obs info"]));
 
   const meta = el("div", "meta");
   if (moelle) {
