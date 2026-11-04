@@ -114,6 +114,7 @@
     <button type="button" class="chip" data-bel="25001-50000" aria-pressed="false">25.001-50.000 kr.</button>
     <button type="button" class="chip" data-bel="50001-100000" aria-pressed="false">50.001-100.000 kr.</button>
     <button type="button" class="chip" data-bel="100000+" aria-pressed="false">100.000 kr +</button>
+    <button type="button" class="chip" data-bel="ukendt" aria-pressed="false">Maxbeløb ikke oplyst</button>
   </div>
   <div id="foldWrap" class="fold">
     <ul id="kommende" aria-label="Kommende frister"></ul>
@@ -140,6 +141,7 @@
    - aarligeFrister: tilbagevendende frister hvert år som ["MM-DD", ...] i stedet for frist – der laves et kort pr. dato de næste 12 måneder
    - "obs info": kort bemærkning der vises på kortet (fx "Bemærk: Intern deadline …") – udelades hvis ingen
    - beloebTekst: fri tekst i stedet for "Søg op til xx kr." (fx "Søg op til 15 %, dog max 15.000 kr.")
+   - minBeloeb: laveste beløb man kan søge (tal) – vises sammen med maxBeloeb som "Søg om 100.000-250.000 kr."
    - maxBeloeb: højeste beløb man kan søge (tal, fx 50000) – udelades hvis ukendt
    - url: direkte link til siden, hvor man kan læse mere og ansøge (vises som "Læs mere" med ikon; uden url vises intet link)
    ============================================================ */
@@ -239,6 +241,17 @@ function link(p) {
   return a;
 }
 
+/* Beløbslinjen: beloebTekst (fri tekst) vinder; ellers bygges den af minBeloeb / maxBeloeb */
+function beloebTekst(p) {
+  const kr = n => n.toLocaleString("da-DK");
+  const min = p.minBeloeb > 0 ? p.minBeloeb : 0;
+  const max = p.maxBeloeb > 0 ? p.maxBeloeb : 0;
+  if (min && max) return "Søg om " + kr(min) + "-" + kr(max) + " kr.";
+  if (max) return "Søg op til " + kr(max) + " kr.";
+  if (min) return "Søg fra " + kr(min) + " kr. · Maxbeløb ikke oplyst";
+  return "Maxbeløb ikke oplyst";
+}
+
 function kort(p) {
   const loeb = erLoebende(p);
   const moelle = erMoelle(p);
@@ -281,10 +294,7 @@ function kort(p) {
   }
   navnP.append(p.navn);
   body.append(navnP);
-  if (p.beloebTekst) body.append(el("p", "beloeb", p.beloebTekst));
-  else if (typeof p.maxBeloeb === "number" && p.maxBeloeb > 0)
-    body.append(el("p", "beloeb", "Søg op til " + p.maxBeloeb.toLocaleString("da-DK") + " kr."));
-  else body.append(el("p", "beloeb", "Maxbeløb ikke oplyst"));
+  body.append(el("p", "beloeb", p.beloebTekst || beloebTekst(p)));
   if (p["obs info"]) body.append(el("p", "obs", p["obs info"]));
 
   const meta = el("div", "meta");
@@ -353,9 +363,11 @@ function matcher(p) {
   if (filterAktiv && p.groen !== true) return false;
   const q = soeg.trim().toLowerCase();
   if (q && !p.navn.toLowerCase().includes(q)) return false;
-  if (valgteBeloeb.size && harBeloeb(p)) {   // kort uden beløb vises altid
+  if (valgteBeloeb.size === 1 && valgteBeloeb.has("ukendt")) {   // kun "Maxbeløb ikke oplyst": vis kun kort uden maxbeløb
+    if (harBeloeb(p)) return false;
+  } else if (valgteBeloeb.size && harBeloeb(p)) {   // kort uden beløb vises altid under intervallerne
     let ok = false;
-    valgteBeloeb.forEach(k => { const [a, b] = BEL[k]; if (p.maxBeloeb >= a && p.maxBeloeb <= b) ok = true; });
+    valgteBeloeb.forEach(k => { if (k === "ukendt") return; const [a, b] = BEL[k]; if (p.maxBeloeb >= a && p.maxBeloeb <= b) ok = true; });
     if (!ok) return false;
   }
   return true;
