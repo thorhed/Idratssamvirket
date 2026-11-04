@@ -9,7 +9,6 @@
     "maxBeloeb": 300000,
     "url": "https://www.dif.dk/raadgivning-og-stoette/stoettemuligheder/dif-og-dgis-foreningspulje"
   },
-
   {
     "navn": "DIF og DGI’s Foreningspulje, lille pulje",
     "frist": "foerst-til-moelle",
@@ -31,7 +30,6 @@
       "2026-05-28",
       "2026-10-29"
     ],
-    "beloebTekst": "Maxbeløb ikke oplyst",
     "url": "https://www.aura.dk/om-aura/vi-stoetter-lokalt/soeg-stoette/"
   },
   {
@@ -56,14 +54,12 @@
     "navn": "NRGi Puljen",
     "groen": true,
     "frist": "2026-11-02",
-    "beloebTekst": "Maxbeløb ikke oplyst",
     "url": "https://andelshaver.nrgi.dk/puljer-og-stoette/nrgi-puljen/"
   },
   {
     "navn": "Nordea-fonden",
     "groen": true,
     "frist": "loebende",
-    "beloebTekst": "Maxbeløb ikke oplyst",
     "url": "https://nordeafonden.dk/"
   },
   {
@@ -76,7 +72,7 @@
       "12-01"
     ],
     "maxBeloeb": 15000,
-    "beloebTekst": "Søg op til 25%, dog max 15.000 kr.",
+    "beloebTekst": "Søg op til 25 %, dog max 15.000 kr.",
     "url": "https://www.idraetssamvirket.dk/tilskud-puljer/idraetssamvirkets-puljer/"
   },
   {
@@ -105,7 +101,7 @@
       "2027-02-15",
       "2027-09-15"
     ],
-    "beloebTekst": "Søg fra 20.000 kr. · Maxbeløb ikke oplyst",
+    "minBeloeb": 20000,
     "url": "https://friluftsraadet.dk/sammen-forbedrer-vi-mulighederne-for-befolkningens-friluftsliv-naturforstaaelse/tilskud-til-projekter/soeg-tilskud-til-lokale-projekter"
   },
   {
@@ -115,7 +111,7 @@
       "2027-06-15",
       "2027-09-15"
     ],
-    "beloebTekst": "Søg fra 200.000 kr. · Maxbeløb ikke oplyst",
+    "minBeloeb": 200000,
     "url": "https://friluftsraadet.dk/sammen-forbedrer-vi-mulighederne-for-befolkningens-friluftsliv-naturforstaaelse/tilskud-til-projekter/soeg-tilskud-til-nationale-projekter"
   },
   {
@@ -125,19 +121,19 @@
       "2027-06-15",
       "2027-09-15"
     ],
-    "beloebTekst": "Søg fra 20.000 kr. · Maxbeløb ikke oplyst",
+    "minBeloeb": 20000,
     "url": "https://friluftsraadet.dk/sammen-forbedrer-vi-mulighederne-for-befolkningens-friluftsliv-naturforstaaelse/tilskud-til-projekter/soeg-fokuspulje-danmarks-naturstier"
   },
   {
     "navn": "Anlægspuljen til idræts-, fritids- og outdoorfaciliteter, Aarhus Kommune",
     "frist": "2027-09-01",
-    "beloebTekst": "Søg op til 50% i tilskud · Maxbeløb ikke oplyst",
+    "beloebTekst": "Søg op til 50 % i tilskud · Maxbeløb ikke oplyst",
     "url": "https://aarhus.dk/forening/tilskud-stoette-og-puljer/foreninger/anlaegspuljen-til-idraets-fritids-og-outdoorfaciliteter"
   },
   {
     "navn": "Anlægspuljen, akut anlægstilskud, Aarhus Kommune",
     "frist": "loebende",
-    "beloebTekst": "Søg op til 50% i tilskud · Maxbeløb ikke oplyst",
+    "beloebTekst": "Søg op til 50 % i tilskud · Maxbeløb ikke oplyst",
     "url": "https://aarhus.dk/forening/tilskud-stoette-og-puljer/foreninger/anlaegspuljen-til-idraets-fritids-og-outdoorfaciliteter"
   },
   {
@@ -146,7 +142,8 @@
       "2027-03-01",
       "2027-08-01"
     ],
-    "beloebTekst": "Søg om: 100.000-250.000 kr.",
+    "minBeloeb": 100000,
+    "maxBeloeb": 250000,
     "obs info": "Bemærk: Intern deadline. Send din ansøgning i god tid.",
     "url": "https://www.sallingfondene.dk/ansoegning/lokale-donationer"
   },
@@ -155,7 +152,8 @@
     "fristListe": [
       "2027-08-01"
     ],
-    "beloebTekst": "Søg om: 100.000-250.000 kr.",
+    "minBeloeb": 100000,
+    "maxBeloeb": 250000,
     "obs info": "Bemærk: Intern deadline. Send din ansøgning i god tid.",
     "url": "https://www.sallingfondene.dk/ansoegning/lokale-donationer"
   }
