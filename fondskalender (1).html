@@ -367,7 +367,12 @@ function matcher(p) {
     if (harBeloeb(p)) return false;
   } else if (valgteBeloeb.size && harBeloeb(p)) {   // kort uden beløb vises altid under intervallerne
     let ok = false;
-    valgteBeloeb.forEach(k => { if (k === "ukendt") return; const [a, b] = BEL[k]; if (p.maxBeloeb >= a && p.maxBeloeb <= b) ok = true; });
+    valgteBeloeb.forEach(k => {
+      if (k === "ukendt") return;
+      const [a, b] = BEL[k];
+      const lav = p.minBeloeb > 0 ? p.minBeloeb : p.maxBeloeb;   // uden minbeløb tæller kun maxbeløbet; med min og max tæller hele området
+      if (p.maxBeloeb >= a && lav <= b) ok = true;
+    });
     if (!ok) return false;
   }
   return true;
