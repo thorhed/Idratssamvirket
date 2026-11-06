@@ -156,5 +156,18 @@
     "maxBeloeb": 250000,
     "obs info": "Bemærk: Intern deadline. Send din ansøgning i god tid.",
     "url": "https://www.sallingfondene.dk/ansoegning/lokale-donationer"
+  },
+  {
+    "navn": "FritidsFrivillig-puljen, Alm. Brand Foreningen 1792",
+    "frist": "2026-12-14",
+    "minBeloeb": 20000,
+    "maxBeloeb": 100000,
+    "url": "https://almbrand1792.dk/det-stoetter-vi/fritidsfrivillig-puljen/"
+  },
+  {
+    "navn": "Fonden for Fynske Bank",
+    "groen": true,
+    "frist": "loebende",
+    "url": "https://www.fondenforfynskebank.dk/soeg-stoette"
   }
 ]
