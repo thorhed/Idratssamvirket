@@ -183,5 +183,100 @@
     "navn": "Lokale donationer gennem Nykredit og Spar Nord",
     "frist": "2027-01-05",
     "url": "https://www.nykredit.dk/lokale-donationer/#sog-donation"
+  },
+  {
+    "navn": "Sydbank Fonden",
+    "frist": "loebende",
+    "url": "https://www.sydbankfonden.dk/ansoeg-sydbank-fonden"
+  },
+  {
+    "navn": "Nordjyllandsfonden",
+    "frist": "loebende",
+    "url": "https://www.nordjyllandsfonden.dk/om-fonden"
+  },
+  {
+    "navn": "Nykredits Fond",
+    "groen": true,
+    "fristListe": [
+      "2027-03-26",
+      "2027-08-13",
+      "2027-11-12"
+    ],
+    "minBeloeb": 20000,
+    "maxBeloeb": 500000,
+    "url": "https://www.nykreditsfond.dk/for-ansoegere/"
+  },
+  {
+    "navn": "Fodfæste i fællesskab, Velliv Foreningen",
+    "frist": "2027-01-12",
+    "minBeloeb": 50000,
+    "maxBeloeb": 150000,
+    "url": "https://www.vellivforeningen.dk/soeg-stoette/hele-liv-i-balance/fodfaeste-i-faellesskab"
+  },
+  {
+    "navn": "A.P. Møller Fonden",
+    "frist": "loebende",
+    "url": "https://www.apmollerfonde.dk/ansoegning/a-p-moeller-fonden/"
+  },
+  {
+    "navn": "Børn og unges trivsel, Hempel Fonden",
+    "frist": "2026-12-08",
+    "url": "https://hempelfonden.dk/sadan-soger-du"
+  },
+  {
+    "navn": "Søsat-puljen, Hempel Fonden",
+    "frist": "loebende",
+    "maxBeloeb": 30000,
+    "url": "https://hempelfonden.dk/sosat-puljen"
+  },
+  {
+    "navn": "Aktivitetsstøtte til foreningsaktiviteter, Aarhus Kommune",
+    "aarligeFrister": [
+      "03-01"
+    ],
+    "url": "https://aarhus.dk/forening/tilskud-stoette-og-puljer/foreninger/aktivitetsstoette-til-boern-og-unge"
+  },
+  {
+    "navn": "Lokaletilskud, Aarhus Kommune",
+    "aarligeFrister": [
+      "04-01",
+      "10-01"
+    ],
+    "beloebTekst": "Søg op til 69 % i tilskud · Maxbeløb ikke oplyst",
+    "url": "https://aarhus.dk/forening/tilskud-stoette-og-puljer/foreninger/lokaletilskud"
+  },
+  {
+    "navn": "Medlemstilskud til ældreidræt (60+), Aarhus Kommune",
+    "aarligeFrister": [
+      "03-01"
+    ],
+    "url": "https://aarhus.dk/forening/tilskud-stoette-og-puljer/foreninger/medlemstilskud-til-aeldreidraet-for-deltagere-paa-60-aar-og-derover"
+  },
+  {
+    "navn": "SeniorAktivitetsPuljen, Aarhus Kommune",
+    "frist": "loebende",
+    "maxBeloeb": 5000,
+    "url": "https://aarhus.dk/forening/tilskud-stoette-og-puljer/foreninger/senioraktivitetspuljen"
+  },
+  {
+    "navn": "Internationalt Rejselegat, Aarhus Oliefabriks Fond",
+    "frist": "2027-01-18",
+    "maxBeloeb": 10000,
+    "url": "https://aarhus.dk/forening/tilskud-stoette-og-puljer/foreninger/internationalt-rejselegat"
+  },
+  {
+    "navn": "Genopretningspuljen til selvejende idrætshaller, Aarhus Kommune",
+    "aarligeFrister": [
+      "03-15",
+      "10-15"
+    ],
+    "beloebTekst": "Søg op til 50 % i tilskud · Maxbeløb ikke oplyst",
+    "url": "https://aarhus.dk/forening/tilskud-stoette-og-puljer/foreninger/genopretningspuljen-til-selvejende-idraetshaller"
+  },
+  {
+    "navn": "Medlemstilskud for medlemmer med handicap, Aarhus Kommune",
+    "frist": "2026-03-01",
+    "beloebTekst": "Søg op til 700 kr. pr. medlem · Maxbeløb ikke oplyst",
+    "url": "https://aarhus.dk/forening/tilskud-stoette-og-puljer/foreninger/medlemstilskud-for-medlemmer-med-handicap"
   }
 ]
