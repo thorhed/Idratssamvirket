@@ -191,7 +191,11 @@
   },
   {
     "navn": "Nordjyllandsfonden",
-    "frist": "loebende",
+    "fristListe": [
+      "2027-02-19",
+      "2027-04-27",
+      "2027-08-05"
+    ],
     "url": "https://www.nordjyllandsfonden.dk/om-fonden"
   },
   {
