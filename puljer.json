@@ -338,13 +338,13 @@
   {
     "navn": "Sparekassen Danmark Fonden Galten",
     "groen": true,
-    "fristListe": [],
+    "fristListe": [2026-02-02],
     "url": "https://www.sparekassendanmarkfondene.dk/"
   },
   {
     "navn": "Sparekassen Danmark Fonden Hobro",
     "groen": true,
-    "fristListe": [],
+    "fristListe": [2026-02-02],
     "url": "https://www.sparekassendanmarkfondene.dk/"
   }
 ]
