@@ -316,5 +316,35 @@
     "maxBeloeb": 50000,
     "obs info": "Støtter med materialer for op til 50.000 kr.",
     "url": "https://www.jemogfix.dk/sponsorater/i-fixer-vi-stoetter/"
+  },
+    {
+    "navn": "Sparekassen Danmark Fonden Himmerland",
+    "groen": true,
+    "frist": "loebende",
+    "maxBeloeb": 50000,
+    "url": "https://www.sparekassendanmarkfondene.dk/"
+  },
+  {
+    "navn": "Sparekassen Danmark Fonden Himmerland",
+    "groen": true,
+    "fristListe": [
+      "2026-02-02",
+      "2026-04-27",
+      "2026-08-24",
+      "2026-11-16"
+    ],
+    "url": "https://www.sparekassendanmarkfondene.dk/"
+  },
+  {
+    "navn": "Sparekassen Danmark Fonden Galten",
+    "groen": true,
+    "fristListe": [],
+    "url": "https://www.sparekassendanmarkfondene.dk/"
+  },
+  {
+    "navn": "Sparekassen Danmark Fonden Hobro",
+    "groen": true,
+    "fristListe": [],
+    "url": "https://www.sparekassendanmarkfondene.dk/"
   }
 ]
