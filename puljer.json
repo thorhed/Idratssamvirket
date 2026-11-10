@@ -290,4 +290,31 @@
     "beloebTekst": "Søg op til 700 kr. pr. medlem · Maxbeløb ikke oplyst",
     "url": "https://aarhus.dk/forening/tilskud-stoette-og-puljer/foreninger/medlemstilskud-for-medlemmer-med-handicap"
   }
+
+  {
+    "navn": "Lokale- og Anlægsfondens Puljeprojekter",
+    "groen": true,
+    "fristListe": [
+      "2027-01-25",
+      "2027-04-12",
+      "2027-08-16",
+      "2027-10-25"
+    ],
+    "beloebTekst": "Søg op til 400.000 kr.",
+    "url": "https://loa-fonden.dk/realiser-dit-projekt/puljeprojekter/"
+  },
+  {
+    "navn": "Lokale- og Anlægsfondens Udviklingsprojekter",
+    "groen": true,
+    "frist": "loebende",
+    "minBeloeb": 2500000,
+    "url": "https://loa-fonden.dk/realiser-dit-projekt/udviklingsprojekter/"
+  },
+  {
+    "navn": "jem & fix – I fixer, vi støtter",
+    "frist": "loebende",
+    "maxBeloeb": 50000,
+    "obs info": "Støtter med materialer for op til 50.000 kr.",
+    "url": "https://www.jemogfix.dk/sponsorater/i-fixer-vi-stoetter/"
+  }
 ]
