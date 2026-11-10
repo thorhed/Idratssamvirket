@@ -235,6 +235,8 @@
   },
   {
     "navn": "Aktivitetsstøtte til foreningsaktiviteter, Aarhus Kommune",
+    "tilskud": true,
+    "tilskudsdeadline": true,
     "aarligeFrister": [
       "03-01"
     ],
@@ -242,6 +244,8 @@
   },
   {
     "navn": "Lokaletilskud, Aarhus Kommune",
+    "tilskud": true,
+    "tilskudsdeadline": true,
     "aarligeFrister": [
       "04-01",
       "10-01"
@@ -251,6 +255,8 @@
   },
   {
     "navn": "Medlemstilskud til ældreidræt (60+), Aarhus Kommune",
+    "tilskud": true,
+    "tilskudsdeadline": true,
     "aarligeFrister": [
       "03-01"
     ],
@@ -279,6 +285,7 @@
   },
   {
     "navn": "Medlemstilskud for medlemmer med handicap, Aarhus Kommune",
+    "tilskud": true,
     "frist": "2026-03-01",
     "beloebTekst": "Søg op til 700 kr. pr. medlem · Maxbeløb ikke oplyst",
     "url": "https://aarhus.dk/forening/tilskud-stoette-og-puljer/foreninger/medlemstilskud-for-medlemmer-med-handicap"
