@@ -35,6 +35,7 @@
     background: var(--lys); border: 1px solid #e3dfc8; border-left: 5px solid var(--primaer);
     border-radius: 8px; padding: 12px 14px; }
   li.loebende { border-left-color: var(--groen); }
+  li.tilskud { border-left-color: var(--blaa); }
   .dato { text-align: center; line-height: 1.1; color: var(--primaer); }
   .dato .dag { display: block; font-size: 1.7rem; font-weight: 700; }
   .dato .md { display: block; font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; color: var(--graa-moerk); }
@@ -264,7 +265,9 @@ function kort(p) {
   const d = (loeb || moelle) ? null : parseDato(p.frist);
   const dage = (loeb || moelle) ? 0 : dageTil(d);
   const li = el("li", loeb ? "loebende" : "");
+  if (p.tilskudsdeadline === true) li.classList.add("tilskud");
 
+  
   let venstre;
   if (moelle) {
     const ad = parseDato(p.aabner);
