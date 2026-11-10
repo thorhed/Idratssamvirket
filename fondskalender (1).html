@@ -145,6 +145,7 @@
    - "obs info": kort bemærkning der vises på kortet (fx "Bemærk: Intern deadline …") – udelades hvis ingen
    - beloebTekst: fri tekst i stedet for "Søg op til xx kr." (fx "Søg op til 15 %, dog max 15.000 kr.")
    - minBeloeb: laveste beløb man kan søge (tal) – vises sammen med maxBeloeb som "Søg om 100.000-250.000 kr."
+   - tilskudsdeadline: true for Aarhus Kommunes tilskud – viser "Tilskudsdeadline" i stedet for beløbslinjen (beloebTekst og maxBeloeb bevares i data)
    - maxBeloeb: højeste beløb man kan søge (tal, fx 50000) – udelades hvis ukendt
    - url: direkte link til siden, hvor man kan læse mere og ansøge (vises som "Læs mere" med ikon; uden url vises intet link)
    ============================================================ */
@@ -299,7 +300,7 @@ function kort(p) {
   }
   navnP.append(p.navn);
   body.append(navnP);
-  body.append(el("p", "beloeb", p.beloebTekst || beloebTekst(p)));
+  body.append(el("p", "beloeb", p.tilskudsdeadline === true ? "Tilskudsdeadline" : (p.beloebTekst || beloebTekst(p))));
   if (p["obs info"]) body.append(el("p", "obs", p["obs info"]));
 
   const meta = el("div", "meta");
