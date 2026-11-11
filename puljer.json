@@ -23,12 +23,14 @@
     "maxBeloeb": 25000,
     "url": "https://www.dif.dk/raadgivning-og-stoette/stoettemuligheder/dif-og-dgis-foreningspulje"
   },
-  {
+    {
     "navn": "AURA Lokalværdipulje",
     "groen": true,
     "fristListe": [
       "2026-05-28",
-      "2026-10-29"
+      "2026-10-29",
+      "2027-05-27",
+      "2027-10-28"
     ],
     "url": "https://www.aura.dk/om-aura/vi-stoetter-lokalt/soeg-stoette/"
   },
